@@ -1,0 +1,167 @@
+/* Container style */
+.about-section {
+  background: linear-gradient(135deg, #e0f7fa 0%, #ffffff 100%);
+  color: #222;
+  min-height: 80vh;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Title Animation */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-title {
+  font-weight: 900;
+  font-size: 3rem;
+  animation: slideInLeft 1s ease forwards;
+  position: relative;
+}
+
+.highlight {
+  color: #007bff;
+  font-style: italic;
+  position: relative;
+}
+
+/* Image Wrapper with glow animation */
+.img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 15px 30px rgba(0, 123, 255, 0.3);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+}
+
+.img-wrapper:hover {
+  transform: rotateY(15deg) rotateX(5deg) scale(1.05);
+  box-shadow: 0 25px 50px rgba(0, 123, 255, 0.5);
+}
+
+.glow {
+  position: absolute;
+  top: -30%;
+  left: -30%;
+  width: 160%;
+  height: 160%;
+  background: radial-gradient(circle at center, rgba(0, 123, 255, 0.5), transparent 70%);
+  filter: blur(40px);
+  opacity: 0.7;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  border-radius: 15px;
+}
+
+.img-wrapper:hover .glow {
+  opacity: 1;
+}
+
+/* Image fade-in */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-image img {
+  animation: fadeInUp 1.2s ease forwards;
+  border-radius: 15px;
+}
+
+/* Text fade-in with delay */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-text {
+  animation: fadeInRight 1.5s ease forwards;
+  color: #1a1a1a;
+}
+
+.lead {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #004085;
+}
+
+/* Features list styling */
+.features-list li {
+  font-size: 1.1rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+  padding-left: 28px;
+  color: #0056b3;
+}
+
+.features-list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.2rem;
+}
+
+/* Button animation */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 15px 10px rgba(0, 123, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
+  }
+}
+
+.animate-button {
+  padding: 0.75rem 2.2rem;
+  font-size: 1.15rem;
+  border-radius: 50px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  animation: pulse 2.5s infinite;
+}
+
+.animate-button:hover {
+  background-color: #0056b3;
+  animation: none;
+  box-shadow: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .about-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .animate-title {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,18 @@
+/* Full height setup */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the root container a flex column to push footer down */
+#root > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Make main content grow to fill space */
+.main-content {
+  flex-grow: 1;
+}

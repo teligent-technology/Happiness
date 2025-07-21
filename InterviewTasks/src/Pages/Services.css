@@ -1,0 +1,104 @@
+.services-section {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 80vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #222;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.services-title {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #333;
+  animation: fadeInDown 1s ease forwards;
+}
+
+.services-title .highlight {
+  color: #007bff;
+  font-style: italic;
+  position: relative;
+  animation: glowText 2s infinite alternate ease-in-out;
+}
+
+/* Service Cards Grid */
+.service-card {
+  background: white;
+  border: 3px solid;
+  border-radius: 20px;
+  padding: 30px 20px 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+  cursor: pointer;
+  outline: none;
+}
+
+.service-card:focus,
+.service-card:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 123, 255, 0.3);
+  border-color: #0056b3 !important;
+}
+
+/* Icon circle */
+.service-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));
+  transition: box-shadow 0.35s ease;
+}
+
+.service-card:focus .service-icon,
+.service-card:hover .service-icon {
+  box-shadow: 0 0 15px 5px rgba(0, 123, 255, 0.7);
+}
+
+/* Service Title */
+.service-title {
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Service Description */
+.service-desc {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 5px #007bff, 0 0 10px #007bff, 0 0 15px #0056b3;
+  }
+  100% {
+    text-shadow: 0 0 15px #0056b3, 0 0 25px #007bff, 0 0 40px #3399ff;
+  }
+}
+
+/* Responsive spacing */
+@media (max-width: 767px) {
+  .service-card {
+    margin-bottom: 25px;
+  }
+}
