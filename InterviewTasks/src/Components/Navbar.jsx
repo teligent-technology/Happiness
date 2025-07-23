@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import './Navbar.css'; // custom styles
+import './Navbar.css'; // updated styles
 
 function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg custom-navbar shadow-sm sticky-top">
       <div className="container">
         <NavLink className="navbar-brand brand-text" to="/">
-          😊 Happiness Plans
+          <span role="img" aria-label="smile">😊</span> Happiness Plans
         </NavLink>
 
         <button

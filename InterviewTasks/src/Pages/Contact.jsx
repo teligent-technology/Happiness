@@ -41,7 +41,7 @@ const Contact = () => {
         <section className="contact-section py-5">
       <div className="container">
         <h1 className="contact-title text-center mb-5 animate-title">
-          Get in <span className="highlight">Touch</span>
+          Get in <span>Touch</span>
         </h1>
         <form
           className="contact-form mx-auto animate-form"
